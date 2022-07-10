@@ -89,6 +89,7 @@ def regression_model_output(
     return instrumentation
 
 buckets = (*np.arange(0, 10.5, 0.5).tolist(), float("inf"))
+#정의한 custom metrics 실행
 instrumentator.add(
     regression_model_output(metric_namespace=NAMESPACE, metric_subsystem=SUBSYSTEM, buckets=buckets)
 )
